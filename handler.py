@@ -6,8 +6,8 @@ import os
 import time
 
 # API_KEY = os.getenv("API_KEY")
-CRYPTORANK_API_KEY = "c81150be0d0537c92dca22536328f00dfbce3e67993ac2deca889b245e15"
-DUNE_API_KEY = "8bzoAHydBg9974qNZScFELYaA30w0QWr"
+CRYPTORANK_API_KEY = os.getenv("CRYPTORANK_API_KEY")
+DUNE_API_KEY = os.getenv("DUNE_API_KEY")
 MAX_REQ_PER_MIN = 100
 CONCURRENCY = 5 
 DASH = "-"
@@ -95,4 +95,5 @@ async def main():
             print(dune_resp.text)
 
 if __name__ == "__main__":
+
     asyncio.run(main())
